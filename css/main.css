@@ -41,3 +41,7 @@ div.clock .placeholder {
 	top: 0;
 	z-index: 50;
 }
+
+div.clock .meridian {
+	margin-left: 15px;
+}
