@@ -19,15 +19,12 @@ function clock(){
 	currentTime.push(hours, minutes, seconds);
 	currentTime = currentTime.join(":") + " " + meridian;
 
-
+	//changes the html to match results
 	document.getElementsByClassName('hours')[0].innerHTML = hours;
 	document.getElementsByClassName('minutes')[0].innerHTML = minutes;
 	document.getElementsByClassName('seconds')[0].innerHTML = seconds;
 	document.getElementsByClassName('meridian')[0].innerHTML = meridian;
-
-	console.log(currentTime);
-	console.log(hours);
-
+	
 }
 
 //turns single digit numbers to two digit numbers by placing a zero in fornt
