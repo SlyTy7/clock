@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: white;
+	background-color: black;
+	font-family: sans-serif;
+}
+
+div.clock {
+	text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+div.clock div{
+	display: inline-block;
+}
+
+div.clock div p{
+	font-size: 48px;
+}
