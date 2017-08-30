@@ -1,12 +1,20 @@
+/*DIGITAL CLOCK FONT*/
+@font-face{
+ font-family:'digital-7';
+ src: url('../fonts/digital-7.ttf');
+}
+
+
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	color: white;
-	background-color: black;
-	font-family: sans-serif;
+	color: #ffffff;
+	background-color: #000000;
+	font-family: 'digital-7', sans-serif;
 }
 
 div.clock {
@@ -23,4 +31,13 @@ div.clock div{
 
 div.clock div p{
 	font-size: 48px;
+	position: relative;
+	z-index: 100;
+}
+
+div.clock .placeholder {
+	color: #272727;
+	position: absolute;
+	top: 0;
+	z-index: 50;
 }
