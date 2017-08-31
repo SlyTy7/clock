@@ -4,8 +4,6 @@
  src: url('../fonts/digital-7.ttf');
 }
 
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -25,18 +23,47 @@ main {
     transform: translate(-50%,-50%);
 }
 
-div.clock div{
+/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
+.light-on {
+	color: #ffffff;
+}
+
+/* DAYS OF THE WEEK */
+div.days {
+	margin: 0 auto;
+}
+
+div.days .day {
 	display: inline-block;
 }
 
+div.days .day p {
+	font-size: 12px;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	color: #131212;
+}
+
+
+/* CLOCK */
+div.clock {
+	margin: 5px 0;
+}
+
+div.clock div{
+	display: inline-block;
+	position: relative;
+}
+
 div.clock div p{
-	font-size: 48px;
+	font-size: 100px;
 	position: relative;
 	z-index: 100;
 }
 
 div.clock .placeholder {
-	color: #272727;
+	color: #131212;
 	position: absolute;
 	top: 0;
 	z-index: 50;
@@ -44,13 +71,14 @@ div.clock .placeholder {
 
 div.clock .meridian {
 	margin-left: 15px;
-}
+}/*END CLOCK*/
 
+
+/* AM OR PM*/
 .am-pm {
 	font-family: sans-serif;
 	text-transform: uppercase;
 	width: 20px;
-	margin: 5px 0;
 }
 
 div.am-pm div p {
@@ -60,9 +88,6 @@ div.am-pm div p {
 }
 
 .am, .pm {
-	color: #272727;
+	color: #131212;
 }
 
-.light-on {
-	color: #ffffff;
-}
