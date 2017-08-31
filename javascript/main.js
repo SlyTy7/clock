@@ -1,4 +1,10 @@
+//invokes functions as soon as window loads
+window.onload = function(){
+	clock();
+	setInterval(clock, 1000);
+};
 
+//gets current time and changes html to reflect it
 function clock(){
 	var date = new Date();
 	var hours = date.getHours();
@@ -31,7 +37,5 @@ function clock(){
 function addZero (val){
 	return (val <= 9 && "0" + val) || val;
 }
-
-setInterval(clock, 1000);
 
 
