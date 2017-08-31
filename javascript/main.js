@@ -27,17 +27,10 @@ function clock(){
 	
 }
 
-//turns single digit numbers to two digit numbers by placing a zero in fornt
+//turns single digit numbers to two digit numbers by placing a zero in front
 function addZero (val){
-	if(val <= 9){
-		val = "0" + val;
-		return val;
-	}else{
-		return val;
-	}
+	return (val <= 9 && "0" + val) || val;
 }
-
-
 
 setInterval(clock, 1000);
 
