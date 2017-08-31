@@ -10,7 +10,6 @@ function clock(){
 	var hours = date.getHours();
 	var minutes = date.getMinutes();
 	var seconds = date.getSeconds();
-	var currentTime = [];
 	var meridian = (hours >= 12) ? 'pm' : 'am';
 
 	//make clock a 12 hour clock instead of 24 hour clock
@@ -20,10 +19,6 @@ function clock(){
 	hours = addZero(hours);
 	minutes = addZero(minutes);
 	seconds = addZero(seconds);
-
-	//formats the time
-	currentTime.push(hours, minutes, seconds);
-	currentTime = currentTime.join(":") + " " + meridian;
 
 	//changes the html to match results
 	document.getElementsByClassName('hours')[0].innerHTML = hours;
