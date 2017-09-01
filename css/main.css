@@ -23,14 +23,12 @@ main {
     transform: translate(-50%,-50%);
 }
 
-/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
-.light-on {
-	color: #ffffff;
-}
+
 
 /* DAYS OF THE WEEK */
 div.days {
 	margin: 0 auto;
+	color: #131212;
 }
 
 div.days .day {
@@ -42,7 +40,6 @@ div.days .day p {
 	font-weight: bold;
 	font-family: sans-serif;
 	text-transform: uppercase;
-	color: #131212;
 }
 
 
@@ -91,3 +88,7 @@ div.am-pm div p {
 	color: #131212;
 }
 
+/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
+.light-on {
+	color: #ffffff;
+}
