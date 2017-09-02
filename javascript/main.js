@@ -52,20 +52,20 @@ function ampm(){
 
 //lights up what day of the week it is
 function whatDay(){
-	var date = new Date();
-	var currentDay = date.getDay();
-	var days = {
-		0: "sunday",
-		1: "monday",
-		2: "tuesday",
-		3: "wednesday",
-		4: "thursday",
-		5: "friday",
-		6: "saturday"
-	}
-	var currentDayHTML = document.getElementsByClassName(days[currentDay])[0].innerHTML;
-	var currentDayClass = document.getElementsByClassName(days[currentDay])[0].classList;
-	var previousDayClass = document.getElementsByClassName(days[currentDay-1])[0].classList;
+	var date = new Date(),
+		currentDay = date.getDay(),
+		days = {
+			0: "sunday",
+			1: "monday",
+			2: "tuesday",
+			3: "wednesday",
+			4: "thursday",
+			5: "friday",
+			6: "saturday"
+		},
+		currentDayHTML = document.getElementsByClassName(days[currentDay])[0].innerHTML,
+		currentDayClass = document.getElementsByClassName(days[currentDay])[0].classList,
+		previousDayClass = document.getElementsByClassName(days[currentDay-1])[0].classList;
 
 	//not quite right.  doesnt remove light on Saturday to Sunday switch due to days array
 	currentDayClass.add("light-on");
