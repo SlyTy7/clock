@@ -63,6 +63,5 @@ function whatDay(){
 		var classArr = days[x].classList;
 
 		(classArr !== undefined) && ((x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on"));
-
 	}
 }
