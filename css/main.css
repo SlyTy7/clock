@@ -26,7 +26,6 @@ main {
 }
 
 
-
 /* DAYS OF THE WEEK */
 div.days {
 	margin: 0 auto;
@@ -66,10 +65,6 @@ div.clock .placeholder {
 	position: absolute;
 	top: 0;
 	z-index: 50;
-}
-
-div.clock .meridian {
-	margin-left: 15px;
 }/*END CLOCK*/
 
 

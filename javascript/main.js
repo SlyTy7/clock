@@ -1,4 +1,3 @@
-
 //invokes functions as soon as window loads
 window.onload = function(){
 	time();
