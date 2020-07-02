@@ -13,16 +13,21 @@ body {
 	color: #ffffff;
 	background-color: #000000;
 	font-family: 'digital-7', sans-serif;
+  padding: 50px 10px;
 }
 
-main {
+body h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+main.clock-container {
 	text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 15px;
-    border: solid 5px #ffffff;
+  padding: 15px;
+  border: solid 5px #ffffff;
+  margin: 60px auto 0 auto;
+  max-width: 468px;
+  width: 100%;
 }
 
 
