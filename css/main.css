@@ -13,7 +13,10 @@ body {
 	color: #ffffff;
 	background-color: #000000;
 	font-family: 'digital-7', sans-serif;
-  padding: 50px 10px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 body h1 {
@@ -22,12 +25,11 @@ body h1 {
 }
 
 main.clock-container {
+  display: inline-block;
 	text-align: center;
   padding: 15px;
   border: solid 5px #ffffff;
   margin: 60px auto 0 auto;
-  max-width: 468px;
-  width: 100%;
 }
 /*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
 .light-on {
@@ -58,7 +60,7 @@ main.clock-container {
 	display: inline-block;
 	position: relative;
 }
-.clock div p{
+.clock div p {
 	font-size: 100px;
 	position: relative;
 	z-index: 100;
@@ -83,4 +85,46 @@ main.clock-container {
 .clock .am,
 .clock .pm {
 	color: #131212;
+}
+@media (max-width:768px) {
+  main.clock-container {
+    padding: 15px 30px;
+  }
+  .desktop-view {
+    display: none;
+  }
+}
+
+@media (max-width:550px) {
+  .clock div p {
+  	font-size: 80px;
+  }
+}
+
+@media (max-width:468px) {
+  .clock div p {
+  	font-size: 60px;
+  }
+}
+
+@media (max-width:400px) {
+  .days .day p,
+  .clock .am-pm div p {
+    font-size: 10px;
+  }
+  .clock div p {
+  	font-size: 50px;
+  }
+}
+
+@media (max-width:350px) {
+  .clock div p {
+  	font-size: 43px;
+  }
+}
+
+@media (max-width:320px) {
+  .clock div p {
+  	font-size: 40px;
+  }
 }
