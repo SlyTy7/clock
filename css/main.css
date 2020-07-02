@@ -29,19 +29,20 @@ main.clock-container {
   max-width: 468px;
   width: 100%;
 }
-
+/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
+.light-on {
+	color: #ffffff !important;
+}
 
 /* DAYS OF THE WEEK */
-div.days {
+.days {
 	margin: 0 auto;
 	color: #131212;
 }
-
-div.days .day {
+.days .day {
 	display: inline-block;
 }
-
-div.days .day p {
+.days .day p {
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
@@ -50,47 +51,36 @@ div.days .day p {
 
 
 /* CLOCK */
-div.clock {
+.clock {
 	margin: 5px 0;
 }
-
-div.clock div{
+.clock div{
 	display: inline-block;
 	position: relative;
 }
-
-div.clock div p{
+.clock div p{
 	font-size: 100px;
 	position: relative;
 	z-index: 100;
 }
-
-div.clock .placeholder {
+.clock .placeholder {
 	color: #131212;
 	position: absolute;
 	top: 0;
 	z-index: 50;
-}/*END CLOCK*/
+}
 
-
-/* AM OR PM*/
-.am-pm {
+.clock .am-pm {
 	font-family: sans-serif;
 	text-transform: uppercase;
 	width: 20px;
 }
-
-div.am-pm div p {
+.clock .am-pm div p {
 	font-size: 12px;
 	font-weight: bold;
 	width: 100%;
 }
-
-.am, .pm {
+.clock .am,
+.clock .pm {
 	color: #131212;
-}
-
-/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
-.light-on {
-	color: #ffffff;
 }
