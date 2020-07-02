@@ -1,72 +1,76 @@
 (() => {
 	const init = () => {
-		// on window loading
-		window.onload = () => {
-			time();
-			ampm();
-			whatDay();
-			setInterval(() => {
-				time();
-				ampm();
-				whatDay();
-			}, 1000);
-		};
+		updateClock();
+		setInterval(() => {
+			updateClock();
+		}, 1000);
 	};
 
-	//gets current time and changes html to reflect it
-	const time = () => {
+	const updateClock = () => {
+		resetClock();
+		getCurrentTime();
+		displayCurrentTime();
+	};
+
+	const getCurrentTime = () => {
 		let date = new Date();
+		let day = date.getDay();
 		let	hours = date.getHours();
 		let	minutes = date.getMinutes();
 		let	seconds = date.getSeconds();
+		let period = (hours >= 12) ? "pm" : "am";		
 
-		//make clock a 12 hour clock instead of 24 hour clock
+		window.clock = {};
+		window.clock.time = {
+			date: date,
+			day: day,
+			hours: hours,
+			minutes: minutes,
+			seconds: seconds,
+			period: period
+		};
+	};
+
+	const displayCurrentTime = () => {
+		let day = window.clock.time.day;
+		let hours = window.clock.time.hours;
+		let minutes = window.clock.time.minutes;
+		let seconds = window.clock.time.seconds;
+		let period = window.clock.time.period;
+
+		//formats hours
 		hours = (hours > 12) ? (hours - 12) : hours;
 		hours = (hours === 0) ? 12 : hours;
+		hours = (hours <= 9) ? ("0" + hours) : hours;
+		//formats minutes
+		minutes = (minutes <= 9) ? ("0" + minutes) : minutes;
+		//formats seconds
+		seconds = (seconds <= 9) ? ("0" + seconds) : seconds;
 
-		//invokes function to make sure number has at least two digits
-		hours = addZero(hours);
-		minutes = addZero(minutes);
-		seconds = addZero(seconds);
+		// targets the html
+		const hoursHtml = document.getElementsByClassName('hours')[0];
+		const minutesHtml = document.getElementsByClassName('minutes')[0];
+		const secondsHtml = document.getElementsByClassName('seconds')[0];
+		const periodHtml = document.getElementsByClassName(period)[0];
+		const dayHtml = document.getElementsByClassName("day")[day];
 
-		//changes the html to match results
-		document.getElementsByClassName('hours')[0].innerHTML = hours;
-		document.getElementsByClassName('minutes')[0].innerHTML = minutes;
-		document.getElementsByClassName('seconds')[0].innerHTML = seconds;
-	}
+		//changes the html values
+		hoursHtml.innerHTML = hours;
+		minutesHtml.innerHTML = minutes;
+		secondsHtml.innerHTML = seconds;
+		periodHtml.classList.add("light-on");
+		dayHtml.classList.add("light-on");
+	};
 
-	//turns single digit numbers to two digit numbers by placing a zero in front
-	const addZero = val => {
-		return (val <= 9) ? ("0" + val) : val;
-	}
+	const resetClock = () => {
+		const lights = document.querySelectorAll(".light-on");
 
-	//lights up either am or pm on clock
-	const ampm = () => {
-		let date = new Date();
-		let	hours = date.getHours();
-		let	am = document.getElementsByClassName("am")[0].classList;
-		let	pm = document.getElementsByClassName("pm")[0].classList;
-
-
-		(hours >= 12) ? pm.add("light-on") : am.add("light-on");
-		(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");
-	}
-
-	//lights up what day of the week it is
-	const whatDay = () => {
-		let date = new Date();
-		let	currentDay = date.getDay();
-		let	days = document.getElementsByClassName("day");
-
-		//iterates through all divs with a class of "day"
-		for (x in days){
-			//list of classes in current div
-			var classArr = days[x].classList;
-
-			(classArr !== undefined) && ((x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on"));
+		if(lights) {
+			lights.forEach(item => {
+				item.classList.remove("light-on")
+			});
 		}
-	}
-
+	};
 
 	return init();
 })()
