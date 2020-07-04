@@ -39,7 +39,7 @@ main.clock-display {
 /* DAYS OF THE WEEK */
 .days {
 	margin: 0 auto;
-	color: #131212;
+	color: #2b2828;
 }
 .days .day {
 	display: inline-block;
@@ -67,7 +67,7 @@ main.clock-display {
 	z-index: 100;
 }
 .clock .numbers .placeholder {
-	color: #131212;
+	color: #2b2828;
 	position: absolute;
 	top: 0;
 	z-index: 50;
@@ -90,7 +90,7 @@ main.clock-display {
 }
 .clock .am,
 .clock .pm {
-	color: #131212;
+	color: #2b2828;
 }
 
 @media (max-width:768px) {
