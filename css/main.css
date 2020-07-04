@@ -24,7 +24,7 @@ body h1 {
   text-align: center;
 }
 
-main.clock-container {
+main.clock-display {
   display: inline-block;
 	text-align: center;
   padding: 15px;
@@ -87,7 +87,7 @@ main.clock-container {
 	color: #131212;
 }
 @media (max-width:768px) {
-  main.clock-container {
+  main.clock-display {
     padding: 15px 30px;
   }
   .desktop-view {
