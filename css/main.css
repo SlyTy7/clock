@@ -30,7 +30,7 @@ body h1 {
 main.clock-display {
   display: inline-block;
 	text-align: center;
-  padding: 15px;
+  padding: 15px 30px;
   border: solid 5px #ffffff;
   margin: 60px auto 0 auto;
   background-color: #000000;
@@ -132,18 +132,27 @@ main.clock-display {
 }
 
 @media (max-width:550px) {
+  .date-field div p {
+    font-size: 30px;
+  }
   .clock-field div p {
   	font-size: 80px;
   }
 }
 
 @media (max-width:468px) {
+  .date-field div p {
+    font-size: 24px;
+  }
   .clock-field div p {
   	font-size: 60px;
   }
 }
 
 @media (max-width:400px) {
+  .date-field div p {
+    font-size: 20px;
+  }
   .days .day p,
   .clock-field .am-pm div p {
     font-size: 10px;
@@ -154,12 +163,16 @@ main.clock-display {
 }
 
 @media (max-width:350px) {
+  .date-field div p {
+    font-size: 20px;
+  }
   .clock-field div p {
   	font-size: 43px;
   }
 }
 
 @media (max-width:320px) {
+  .date-field div p {}
   .clock-field div p {
   	font-size: 40px;
   }
