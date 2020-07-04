@@ -55,8 +55,9 @@ main.clock-display {
 /* CLOCK */
 .clock {
 	margin: 5px 0;
+  display: flex;
 }
-.clock div{
+.clock div {
 	display: inline-block;
 	position: relative;
 }
@@ -65,13 +66,18 @@ main.clock-display {
 	position: relative;
 	z-index: 100;
 }
-.clock .placeholder {
+.clock .numbers .placeholder {
 	color: #131212;
 	position: absolute;
 	top: 0;
 	z-index: 50;
 }
-
+.clock .numbers .type {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
 .clock .am-pm {
 	font-family: sans-serif;
 	text-transform: uppercase;
@@ -86,6 +92,7 @@ main.clock-display {
 .clock .pm {
 	color: #131212;
 }
+
 @media (max-width:768px) {
   main.clock-display {
     padding: 15px 30px;
