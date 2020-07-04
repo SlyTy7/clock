@@ -35,6 +35,7 @@ main.clock-display {
   margin: 60px auto 0 auto;
   background-color: #000000;
   color: #ffffff;
+  box-shadow: 4px 4px 7px 4px rgba(0,0,0,.3);
 }
 /*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
 .light-on {
