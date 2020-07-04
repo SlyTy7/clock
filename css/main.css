@@ -10,8 +10,7 @@
 }
 
 body {
-	color: #ffffff;
-	background-color: #000000;
+  background-color: #306575;
 	font-family: 'digital-7', sans-serif;
   padding: 50px 20px;
   display: flex;
@@ -20,8 +19,12 @@ body {
 }
 
 body h1 {
-  font-size: 24px;
+  font-size: 14px;
+  font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  padding-bottom: 15px;
 }
 
 main.clock-display {
@@ -30,6 +33,8 @@ main.clock-display {
   padding: 15px;
   border: solid 5px #ffffff;
   margin: 60px auto 0 auto;
+  background-color: #000000;
+  color: #ffffff;
 }
 /*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
 .light-on {
@@ -51,45 +56,68 @@ main.clock-display {
 	text-transform: uppercase;
 }
 
-
-/* CLOCK */
-.clock {
+/* DATE */
+.date-field {
 	margin: 5px 0;
   display: flex;
+  justify-content: space-between;
 }
-.clock div {
+.date-field div {
 	display: inline-block;
 	position: relative;
 }
-.clock div p {
-	font-size: 100px;
+.date-field div p {
+	font-size: 34px;
 	position: relative;
 	z-index: 100;
 }
-.clock .numbers .placeholder {
+.date-field div p.placeholder {
 	color: #2b2828;
 	position: absolute;
 	top: 0;
 	z-index: 50;
 }
-.clock .numbers .type {
+
+/* CLOCK */
+.clock-field {
+	margin: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+.clock-field div {
+	display: inline-block;
+	position: relative;
+}
+.clock-field div p {
+	font-size: 100px;
+	position: relative;
+	z-index: 100;
+}
+.clock-field .numbers .placeholder {
+	color: #2b2828;
+	position: absolute;
+	top: 0;
+	z-index: 50;
+}
+.clock-field .numbers .type {
   font-size: 12px;
   font-weight: bold;
   font-family: sans-serif;
   text-transform: uppercase;
 }
-.clock .am-pm {
+.clock-field .am-pm {
 	font-family: sans-serif;
 	text-transform: uppercase;
 	width: 20px;
 }
-.clock .am-pm div p {
+.clock-field .am-pm div p {
 	font-size: 12px;
 	font-weight: bold;
 	width: 100%;
 }
-.clock .am,
-.clock .pm {
+
+.clock-field .am,
+.clock-field .pm {
 	color: #2b2828;
 }
 
@@ -103,35 +131,35 @@ main.clock-display {
 }
 
 @media (max-width:550px) {
-  .clock div p {
+  .clock-field div p {
   	font-size: 80px;
   }
 }
 
 @media (max-width:468px) {
-  .clock div p {
+  .clock-field div p {
   	font-size: 60px;
   }
 }
 
 @media (max-width:400px) {
   .days .day p,
-  .clock .am-pm div p {
+  .clock-field .am-pm div p {
     font-size: 10px;
   }
-  .clock div p {
+  .clock-field div p {
   	font-size: 50px;
   }
 }
 
 @media (max-width:350px) {
-  .clock div p {
+  .clock-field div p {
   	font-size: 43px;
   }
 }
 
 @media (max-width:320px) {
-  .clock div p {
+  .clock-field div p {
   	font-size: 40px;
   }
 }
