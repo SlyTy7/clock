@@ -8,7 +8,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 body {
   background-color: #306575;
 	font-family: 'digital-7', sans-serif;
@@ -17,7 +16,6 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
 body h1 {
   font-size: 14px;
   font-weight: bold;
@@ -26,8 +24,7 @@ body h1 {
   font-family: sans-serif;
   padding-bottom: 15px;
 }
-
-main.clock-display {
+body main.clock-display {
   display: inline-block;
 	text-align: center;
   padding: 15px 30px;
@@ -37,24 +34,8 @@ main.clock-display {
   color: #ffffff;
   box-shadow: 4px 4px 7px 4px rgba(0,0,0,.3);
 }
-/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
 .light-on {
 	color: #ffffff !important;
-}
-
-/* DAYS OF THE WEEK */
-.days {
-	margin: 0 auto;
-	color: #2b2828;
-}
-.days .day {
-	display: inline-block;
-}
-.days .day p {
-	font-size: 12px;
-	font-weight: bold;
-	font-family: sans-serif;
-	text-transform: uppercase;
 }
 
 /* DATE */
@@ -77,6 +58,49 @@ main.clock-display {
 	position: absolute;
 	top: 0;
 	z-index: 50;
+}
+.date-field div.day-of-week-mobile {
+  display: none;
+}
+.date-field div.day-of-week p {
+  font-size: 50px;
+}
+.date-field div p.type {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .date-field {
+    justify-content: space-evenly;
+  }
+  .date-field div.day-of-week {
+    display: none;
+  }
+  .date-field div.day-of-week-mobile {
+    display: inline-block;
+  }
+  .date-field div.day-of-week-mobile p {
+    font-size: 56px;
+    margin-top: -2px;
+  }
+}
+@media (max-width:550px) {
+  .date-field div.day-of-week-mobile p {
+    font-size: 50px;
+    margin-top: 0px;
+  }
+}
+@media (max-width:468px) {
+  .date-field div.day-of-week-mobile p {
+    font-size: 42px;
+  }
+}
+@media (max-width:400px) {
+  .date-field div.day-of-week-mobile p {
+    font-size: 20px;
+  }
 }
 
 /* CLOCK */
@@ -101,10 +125,11 @@ main.clock-display {
 	z-index: 50;
 }
 .clock-field .numbers .type {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   font-family: sans-serif;
   text-transform: uppercase;
+  margin-top: -10px;
 }
 .clock-field .am-pm {
 	font-family: sans-serif;
@@ -116,7 +141,6 @@ main.clock-display {
 	font-weight: bold;
 	width: 100%;
 }
-
 .clock-field .am,
 .clock-field .pm {
 	color: #2b2828;

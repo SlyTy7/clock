@@ -62,6 +62,8 @@
 		if(days[day].length === 7) dayText = `<span style="color: #2b2828;">oo</span>${days[day]}`;
 		if(days[day].length === 8) dayText = `<span style="color: #2b2828;">o</span>${days[day]}`;
 		if(days[day].length === 9) dayText = `<span style="color: #2b2828;"></span>${days[day]}`;
+		//formats mobile day
+		let mobileDays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 		//formats month
 		let months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
 		//formats date
@@ -69,6 +71,7 @@
 
 		// targets the html
 		const dayHtml = document.getElementsByClassName('day-alpha')[0];
+		const mobileDayHtml = document.getElementsByClassName('day-alpha-mobile')[0];
 		const monthHtml = document.getElementsByClassName('month-alpha')[0];
 		const dateHtml = document.getElementsByClassName('date-number')[0];
 		const yearHtml = document.getElementsByClassName('year-number')[0];
@@ -79,6 +82,7 @@
 
 		// changes the html values
 		dayHtml.innerHTML = dayText;
+		mobileDayHtml.innerHTML = mobileDays[day];
 		monthHtml.innerHTML = months[month];
 		dateHtml.innerHTML = date;
 		yearHtml.innerHTML = year;
