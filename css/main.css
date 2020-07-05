@@ -9,7 +9,7 @@
 	padding: 0;
 }
 body {
-  background-color: #306575;
+  background-color: #47694a;
 	font-family: 'digital-7', sans-serif;
   padding: 50px 20px;
   display: flex;
@@ -29,6 +29,7 @@ body main.clock-display {
 	text-align: center;
   padding: 15px 30px;
   border: solid 5px #ffffff;
+  border-radius: 10px;
   margin: 60px auto 0 auto;
   background-color: #000000;
   color: #ffffff;
