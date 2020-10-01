@@ -1,3 +1,3 @@
 # clock
 A simple digital clock made with vanilla javascript
-Made with love 💕💕
+ Made with love 💕💕
