@@ -1,3 +1,4 @@
+<!-- portfolio-meta display_name: Digital Clock -->
 # 🕒 Digital Clock
 
 A minimalist digital clock built with **vanilla JavaScript**, **HTML**, and **CSS**. This project demonstrates how to create a real-time updating clock without relying on external libraries or frameworks.
